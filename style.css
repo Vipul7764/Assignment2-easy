@@ -1,0 +1,241 @@
+*{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Inter',sans-serif;
+      background:#f6f2ec;
+      color:#2d120f;
+      overflow-x:hidden;
+    }
+
+    .container{
+      width:100%;
+      min-height:100vh;
+      padding:40px 70px 100px;
+      position:relative;
+    }
+
+    /* top small logo */
+    .star{
+      position:absolute;
+      left:55px;
+      top:40px;
+      font-size:70px;
+      color:#b42b1e;
+      font-weight:300;
+    }
+
+    /* top right text */
+    .future{
+      position:absolute;
+      right:70px;
+      top:50px;
+      font-size:12px;
+      color:#7e726d;
+      text-transform:uppercase;
+      line-height:1.4;
+      letter-spacing:1px;
+    }
+
+    /* hero */
+    .hero{
+      width:1000px;
+      margin:0 auto;
+      padding-top:20px;
+    }
+
+    .hero h1{
+      font-size:78px;
+      line-height:0.95;
+      font-weight:300;
+      letter-spacing:-4px;
+      text-transform:uppercase;
+    }
+
+    .dark{
+      color:#2b0d0b;
+      font-weight:500;
+    }
+
+    .light{
+      color:#b8b1ac;
+      font-weight:300;
+    }
+
+    /* orange pill */
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:95px;
+      height:48px;
+      border-radius:40px;
+      background:linear-gradient(
+      135deg,
+      #3a0907,
+      #d84d23,
+      #ff8147
+      );
+      margin:0 12px;
+      vertical-align:middle;
+      overflow:hidden;
+      position:relative;
+    }
+
+    .pill::before{
+      content:"";
+      position:absolute;
+      width:38px;
+      height:38px;
+      background:#180404;
+      border-radius:50%;
+      right:10px;
+    }
+
+    .desc{
+      width:360px;
+      margin-top:28px;
+      color:#8d827d;
+      line-height:1.6;
+      font-size:14px;
+    }
+
+    /* projects side text */
+    .side-text{
+      position:absolute;
+      left:70px;
+      top:420px;
+    }
+
+    .side-text h3{
+      font-size:20px;
+      font-weight:400;
+      line-height:1.2;
+      text-transform:uppercase;
+      color:#3a1a17;
+      text-decoration:underline;
+    }
+
+    /* cards */
+    .cards{
+      width:860px;
+      margin:40px auto 0;
+      display:flex;
+      gap:26px;
+    }
+
+    .card{
+      flex:1;
+      height:330px;
+      border-radius:22px;
+      overflow:hidden;
+      position:relative;
+      background:#111;
+      cursor:pointer;
+      transition:0.4s ease;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+    }
+
+    .card img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      filter:brightness(0.75);
+    }
+
+    /* second section */
+    .growth{
+      width:1000px;
+      margin:140px auto 0;
+      text-align:center;
+    }
+
+    .growth h2{
+      font-size:82px;
+      line-height:0.95;
+      text-transform:uppercase;
+      letter-spacing:-4px;
+      font-weight:300;
+    }
+
+    .growth p{
+      width:500px;
+      margin:30px auto 0;
+      color:#8f8580;
+      line-height:1.7;
+      font-size:14px;
+    }
+
+    /* responsive */
+    @media(max-width:1100px){
+
+      .hero,
+      .cards,
+      .growth{
+        width:100%;
+      }
+
+      .hero h1,
+      .growth h2{
+        font-size:58px;
+      }
+
+      .cards{
+        flex-direction:column;
+      }
+
+      .card{
+        height:420px;
+      }
+
+      .side-text{
+        position:relative;
+        left:0;
+        top:0;
+        margin:40px 0;
+      }
+
+      .future{
+        display:none;
+      }
+
+    }
+
+    @media(max-width:700px){
+
+      .container{
+        padding:30px 25px 80px;
+      }
+
+      .hero h1,
+      .growth h2{
+        font-size:42px;
+        letter-spacing:-2px;
+      }
+
+      .pill{
+        width:75px;
+        height:40px;
+      }
+
+      .desc,
+      .growth p{
+        width:100%;
+      }
+
+      .card{
+        height:320px;
+      }
+
+      .star{
+        left:20px;
+        top:20px;
+      }
+
+    }
